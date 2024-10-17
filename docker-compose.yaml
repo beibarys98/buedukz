@@ -1,0 +1,16 @@
+version: '3.8'
+
+services:
+  wordpress:
+    image: wordpress:latest
+    restart: always
+    ports:
+      - 85:80
+    environment:
+      WORDPRESS_DB_HOST: 10.0.0.41
+      WORDPRESS_DB_USER: buedukz
+      WORDPRESS_DB_PASSWORD: p@$$w0rdBUEDUKZ2024
+      WORDPRESS_DB_NAME: buedukz
+    volumes:
+      - ./:/var/www/html
+
